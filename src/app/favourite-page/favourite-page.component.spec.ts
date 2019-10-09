@@ -22,4 +22,7 @@ describe('FavouritePageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should get categories on initialization', ()=> {
+    expect(component.categories.length).not.toEqual(0);
+  })
 });

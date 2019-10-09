@@ -1,16 +1,18 @@
-<header>
-  <div>
-    <ul>
-      <li *ngFor="let category of categories">
-        <div *ngIf="category">
-          <span>{{ category.name }}</span>
-          <div *ngFor="let img of category.images">
-            <a href="{{img}}" download="searchImage">
-              <img src="{{ img }}" alt="img"/>
+<div>
+  <ul>
+    <li *ngFor="let category of categories">
+      <div *ngIf="category" class="row">
+        <header>
+          <span *ngIf="category.name">List : {{ category.name }}</span>
+        </header>
+        <section>
+          <div *ngFor="let img of category.images" class="column">
+            <a href="{{ img }}" download="searchImage">
+              <img src="{{ img }}" alt="img" style="width: 100%" />
             </a>
           </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-</header>
+        </section>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -32,4 +32,9 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('dimebox-test-app app is running!');
   });
+  it("should initialize the data", ()=> {
+    const component = TestBed.createComponent(AppComponent);
+    const app = component.debugElement.componentInstance;
+    expect(app.loading).toBeTruthy();
+  })
 });

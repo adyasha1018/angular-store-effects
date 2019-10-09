@@ -22,4 +22,12 @@ describe('SearchComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should initialize the variables', () => {
+    expect(component.searchTerm).toBe("");
+    expect(component.images.length).toBe(0);
+  });
+  it("should return image data on search 'hill'", ()=> {
+    component.searchTerm = 'hill';
+    expect(component.images.length).toBe(1);
+  })
 });

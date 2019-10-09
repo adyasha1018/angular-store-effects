@@ -19,8 +19,6 @@ export class FavouritePageComponent implements OnInit {
       .select("categoryList")
       .subscribe(stateData => {
         this.categories = stateData.list;
-        //console.log(this.categories.shift());
-        //return this.categories.shift();
       });
   }
   ngOnDestroy() {

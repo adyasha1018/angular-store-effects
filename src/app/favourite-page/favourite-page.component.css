@@ -1,10 +1,35 @@
 span {
-    background-color: grey;
-    color: black;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
 }
 p {
-    font: 3em sans-serif italic;
+  font: 3em sans-serif italic;
+}
+* {
+  box-sizing: border-box;
 }
 li {
-    list-style-type: none;
+  list-style-type: none;
+}
+.row {
+  display: flex;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+header {
+    width: 100px;
 }

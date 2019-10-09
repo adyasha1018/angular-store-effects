@@ -7,9 +7,6 @@
       <h3>Add Images to List</h3>
     </header>
     <article>
-      <button [disabled]="listPresent" (click)="addList()" class="create-list">
-        Create list
-      </button>
       <aside *ngIf="categories.length">
         <div *ngFor="let cat of categories">
           <span>{{ cat.name }}</span>

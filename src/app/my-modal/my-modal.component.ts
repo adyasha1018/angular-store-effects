@@ -16,8 +16,6 @@ export class MyModalComponent implements OnInit {
   categoryName: string;
   categoryDesc: string;
   modalOpened: boolean = false;
-  listPresent: boolean = false;
-  addToList: boolean = false;
   editedItem: List;
   categories = [];
   subscription: Subscription;
@@ -43,10 +41,6 @@ export class MyModalComponent implements OnInit {
   closeModal() {
     document.getElementById("myModal").style.display = "none";
     this.clearData();
-  }
-  addList() {
-    this.addToList = !this.addToList;
-    this.listPresent = true;
   }
   clearData() {
     this.categoryName = "";
