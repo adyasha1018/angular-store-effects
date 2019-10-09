@@ -1,0 +1,76 @@
+<button id="myBtn" (click)="openModal()">Mark Favourite</button>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <header>
+      <span class="close" (click)="closeModal()">&times;</span>
+      <h3>Add Images to List</h3>
+    </header>
+    <article>
+      <button [disabled]="listPresent" (click)="addList()" class="create-list">
+        Create list
+      </button>
+      <aside *ngIf="categories.length">
+        <div *ngFor="let cat of categories">
+          <span>{{ cat.name }}</span>
+          <button *ngIf="cat.name" (click)="edit(cat)" [disabled]="editedItem">
+            Edit
+          </button>
+          <button
+            *ngIf="cat.name"
+            (click)="addImageToThisList(cat)"
+            [disabled]="editedItem"
+          >
+            Add To This List
+          </button>
+        </div>
+      </aside>
+      <section>
+        <div style="display: inline-block">
+          <div id="categoryName">
+            <label for="name">
+              <span>Name</span>
+              <input
+                type="text"
+                name="name"
+                id="categoryName"
+                [(ngModel)]="categoryName"
+              />
+            </label>
+          </div>
+          <div id="categoryDesc">
+            <label for="desc"
+              >Description
+              <input
+                type="text"
+                name="desc"
+                id="categoryDesc"
+                [(ngModel)]="categoryDesc"
+              />
+            </label>
+          </div>
+        </div>
+      </section>
+    </article>
+    <footer>
+      <button
+        type="submit"
+        id="save"
+        (click)="onSubmit()"
+        *ngIf="!editedItem"
+        [disabled]="!categoryName"
+      >
+        Save
+      </button>
+      <button
+        type="submit"
+        id="update"
+        (click)="update()"
+        *ngIf="editedItem"
+      >
+        Update
+      </button>
+      <button id="cancel" type="button" (click)="closeModal()">Cancel</button>
+    </footer>
+  </div>
+</div>

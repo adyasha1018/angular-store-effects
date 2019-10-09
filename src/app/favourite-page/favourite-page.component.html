@@ -1,0 +1,16 @@
+<header>
+  <div>
+    <ul>
+      <li *ngFor="let category of categories">
+        <div *ngIf="category">
+          <span>{{ category.name }}</span>
+          <div *ngFor="let img of category.images">
+            <a href="{{img}}" download="searchImage">
+              <img src="{{ img }}" alt="img"/>
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>

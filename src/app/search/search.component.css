@@ -1,0 +1,54 @@
+.images {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img:hover {
+  cursor: pointer;
+}
+div.image-hover {
+  position: relative;
+  float: left;
+}
+div.image-hover:hover img {
+  opacity: 0.5;
+}
+ div.image-hover a {
+    top: 5px;
+    position: absolute;
+    left: 7px;
+    visibility: hidden;
+    text-decoration: none;
+} 
+div.image-hover my-modal {
+  top: 0;
+  left: 52%;
+  font-weight: bold;
+  visibility: hidden;
+  position: absolute;
+}
+div.image-hover:hover a,
+div.image-hover:hover my-modal {
+  position: absolute;
+  visibility: visible;
+  display: block;
+}
+
+
+label {
+  display: block;
+  width: 7em;
+  margin: 0.5em 0;
+  color: #607d8b;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input {
+  height: 2em;
+  font-size: 1em;
+  padding-left: 0.4em;
+}
+img {
+  border: 5px solid blue;
+}

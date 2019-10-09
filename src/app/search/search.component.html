@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+      <label for="searchImage">
+          <span>Search Image:</span>
+          <input
+            [(ngModel)]="searchTerm"
+            type="text"
+            id="searchTerm"
+            name="searchTerm"
+            placeholder="type like hill, head, face etc"
+          />
+        </label>
+  </div>
+
+</form>
+<section class="images">
+  <div class="image-hover" *ngFor="let image of images">
+    <img src="{{ image.userImageURL }}" />
+    <a href="{{ image.pageURL }}">Author</a>
+    <my-modal [image]="image" [categoryList]="categoryList"></my-modal>
+  </div>
+</section>

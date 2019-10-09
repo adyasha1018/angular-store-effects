@@ -1,0 +1,10 @@
+span {
+    background-color: grey;
+    color: black;
+}
+p {
+    font: 3em sans-serif italic;
+}
+li {
+    list-style-type: none;
+}
