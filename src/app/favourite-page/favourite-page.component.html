@@ -3,7 +3,7 @@
     <li *ngFor="let category of categories">
       <div *ngIf="category" class="row">
         <header>
-          <span *ngIf="category.name">List : {{ category.name }}</span>
+          <span *ngIf="category.name">{{ category.name }} : </span>
         </header>
         <section>
           <div *ngFor="let img of category.images" class="column">
@@ -11,6 +11,7 @@
               <img src="{{ img }}" alt="img" style="width: 100%" />
             </a>
           </div>
+          <span *ngIf="category.images.length === 0">No Images available</span>
         </section>
       </div>
     </li>

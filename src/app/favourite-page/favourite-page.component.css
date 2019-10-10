@@ -1,6 +1,10 @@
 span {
   color: black;
   font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  border: 2px solid lightblue;
+  background-color: beige;
+  text-transform: capitalize;
 }
 p {
   font: 3em sans-serif italic;
@@ -13,6 +17,7 @@ li {
 }
 .row {
   display: flex;
+  padding: 5px;
 }
 .column {
   float: left;
